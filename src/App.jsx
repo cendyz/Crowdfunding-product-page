@@ -11,7 +11,13 @@ const App = () => {
 					alt='Company logo crowdfund'
 					className='nav-mobile-logo'
 				/>
-				<button className='nav-mobile-hamburger'></button>
+				<button className='nav-mobile-hamburger'>
+					<img
+						src='src/images/icon-hamburger.svg'
+						alt='Menu icon'
+						className='nav-mobile-hamburger-icon'
+					/>
+				</button>
 			</nav>
 			<header className='header'>
 				<img
@@ -27,20 +33,24 @@ const App = () => {
 						alt='M letter'
 						className='first-logo'
 					/>
-					<h1 className='first-title'>Mastercraft Bamboo Monitor Riser</h1>
-					<p className='first-text'>
-						A beautiful & handcrafted monitor stand to reduce neck and eye
-						strain.
-					</p>
-					<div className='btns'>
-						<button className='first-btn'>Back this project</button>
-						<button className='first-save'>
-							<img
-								src='src/images/icon-bookmark.svg'
-								alt='Bookmark icon'
-								className='main-save-img'
-							/>
-						</button>
+					<div className='first-box-content'>
+						<h1 className='first-title'>
+							Mastercraft Bamboo Monitor Riser
+						</h1>
+						<p className='first-text'>
+							A beautiful & handcrafted monitor stand to reduce neck and
+							eye strain.
+						</p>
+						<div className='btns'>
+							<button className='first-btn'>Back this project</button>
+							<button className='first-save'>
+								<img
+									src='src/images/icon-bookmark.svg'
+									alt='Bookmark icon'
+									className='main-save-img'
+								/>
+							</button>
+						</div>
 					</div>
 				</div>
 				<div className='second-box'>

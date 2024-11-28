@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid'
 const App = () => {
 	return (
 		<>
+			<div className='shadow'></div>
 			<nav className='nav-mobile'>
 				<img
 					src='src/images/logo.svg'
@@ -18,6 +19,18 @@ const App = () => {
 						className='nav-mobile-hamburger-icon'
 					/>
 				</button>
+
+				<div className='nav__mobile-menu'>
+					<a href='#' className='nav__mobile-menu-link'>
+						About
+					</a>
+					<a href='#' className='nav__mobile-menu-link'>
+						Discover
+					</a>
+					<a href='#' className='nav__mobile-menu-link'>
+						Get Started
+					</a>
+				</div>
 			</nav>
 			<header className='header'>
 				<img
@@ -136,6 +149,44 @@ const App = () => {
 						</button>
 					</div>
 				</div>
+				<div className='last-box modal'>
+					<div className='modal-up-box'>
+						<h2 className='last-box-title'>Back this project</h2>
+						<img
+							src='src/images/icon-close-modal.svg'
+							alt='X icon'
+							className='modal-up-box-x'
+						/>
+					</div>
+					<p className='last__box-inner-text'>
+						Want to support us in bringing Mastercraft Bamboo Monitor Riser
+						out in the world?
+					</p>
+					<div className='last__box-inner'>
+						<div className='modal-select'>
+							<input type='radio' name='pledge' id='zero' className='modal-input'/>
+							<label
+								htmlFor='zero'
+								className='modal-select-label last__box-inner-title'>
+								Bamboo Stand
+								<span className='modal-pledge'>
+									Pledge $25 or more
+								</span>
+							</label>
+						</div>
+						<h3 className='last__box-inner-title'></h3>
+						<p className=''></p>
+						<p className='last__box-inner-text'>
+							You get a Black Special Edition computer stand and a personal
+							thank you. You’ll be added to our Backer memmber list.
+							Shipping is included.
+						</p>
+						<div className='last__box-inner-left'>
+							<p className='last__box-inner-left-price'>64</p>
+							<p className='last__box-inner-left-text'>left</p>
+						</div>
+					</div>
+				</div>
 			</main>
 		</>
 	)
@@ -149,7 +200,7 @@ export default App
 //   Mastercraft Bamboo Monitor Riser
 //
 
-//   Back this project
+//
 //   Bookmark
 
 //   $89,914
@@ -181,7 +232,7 @@ export default App
 //   <!-- Selection modal start -->
 
 //   Back this project
-//   Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
+//
 
 //   Pledge with no reward
 //   Choose to support us without a reward if you simply believe in our project. As a backer,

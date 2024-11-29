@@ -14,8 +14,14 @@ body {
 	background-color: rgb(250, 250, 250);
 }
 
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1150px;
+}
+
 .shadow {
-	// display: none;
+	display: none;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -25,7 +31,7 @@ body {
 	z-index: 10;
 }
 
-.nav-mobile {
+.nav {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
@@ -33,29 +39,30 @@ body {
 	z-index: 100;
 }
 
-.nav {
-	&__mobile {
-		&-menu {
-			display: none;
-			position: absolute;
-			bottom: -225%;
-			width: calc(100% - 48px);
-			background-color: white;
-			border: 1px solid rgb(231, 231, 231);
-			border-radius: 0.5em;
-			z-index: 100;
-			&-link {
-				display: block;
-				padding: 1.1em 1.5em;
-				color: var(--black);
-				font-weight: 500;
-				font-size: 1.8rem;
-				border-bottom: 1px solid rgb(231, 231, 231);
-				&:last-child {
-					border-bottom: none;
-				}
-			}
-		}
+.nav-desktop-links {
+	display: none;
+}
+
+.nav-mobile-menu {
+	display: none;
+	position: absolute;
+	bottom: -225%;
+	width: calc(100% - 48px);
+	background-color: white;
+	border: 1px solid rgb(231, 231, 231);
+	border-radius: 0.5em;
+	z-index: 100;
+}
+
+.nav-mobile-menu-link {
+	display: block;
+	padding: 1.1em 1.5em;
+	color: var(--black);
+	font-weight: 500;
+	font-size: 1.8rem;
+	border-bottom: 1px solid rgb(231, 231, 231);
+	&:last-child {
+		border-bottom: none;
 	}
 }
 
@@ -80,6 +87,7 @@ body {
 	display: grid;
 	grid-template-rows: auto auto 1fr;
 	place-items: center;
+	z-index: 10;
 }
 
 .first-box-content,
@@ -294,6 +302,10 @@ body {
 	z-index: 100;
 }
 
+.modal-up-box-x {
+	cursor: pointer;
+}
+
 .modal-box-title {
 	margin-bottom: 0;
 }
@@ -372,6 +384,42 @@ body {
 
 .complete-title {
 	margin: 1em 0;
+}
+
+@media (min-width: 992px) {
+	.nav {
+		padding: 4em 1.5em;
+	}
+
+	.nav-mobile-hamburger {
+		display: none;
+	}
+
+	.nav-desktop-links {
+		display: flex;
+		column-gap: 3em;
+	}
+
+	.nav-desktop-link {
+		color: white;
+	}
+
+	.header-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 27.78vw;
+		background: rgb(0, 0, 0);
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.5452381636248249) 0%,
+			rgba(255, 255, 255, 0) 100%
+		);
+		z-index: 1;
+	}
 }
 
 // - Mobile: 375px

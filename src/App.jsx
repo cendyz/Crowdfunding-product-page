@@ -6,11 +6,11 @@ const App = () => {
 	return (
 		<>
 			<div className='shadow'></div>
-			<nav className='nav-mobile'>
+			<nav className='nav wrapper'>
 				<img
 					src='src/images/logo.svg'
 					alt='Company logo crowdfund'
-					className='nav-mobile-logo'
+					className='nav-logo'
 				/>
 				<button className='nav-mobile-hamburger'>
 					<img
@@ -20,24 +20,42 @@ const App = () => {
 					/>
 				</button>
 
-				<div className='nav__mobile-menu'>
-					<a href='#' className='nav__mobile-menu-link'>
+				<div className='nav-mobile-menu'>
+					<a href='#' className='nav-mobile-menu-link'>
 						About
 					</a>
-					<a href='#' className='nav__mobile-menu-link'>
+					<a href='#' className='nav-mobile-menu-link'>
 						Discover
 					</a>
-					<a href='#' className='nav__mobile-menu-link'>
+					<a href='#' className='nav-mobile-menu-link'>
+						Get Started
+					</a>
+				</div>
+				<div className='nav-desktop-links'>
+					<a href='#' className='nav-desktop-link'>
+						About
+					</a>
+					<a href='#' className='nav-desktop-link'>
+						Discover
+					</a>
+					<a href='#' className='nav-desktop-link'>
 						Get Started
 					</a>
 				</div>
 			</nav>
 			<header className='header'>
-				<img
-					src='src/images/image-hero-mobile.jpg'
-					alt='Macbook on the desk'
-					className='header-img'
-				/>
+				<picture>
+					<source
+						srcSet='src/images/image-hero-desktop.jpg'
+						media='(min-width: 992px)'
+					/>
+					<img
+						src='src/images/image-hero-mobile.jpg'
+						alt='Macbook on the desk'
+						className='header-img'
+					/>
+				</picture>
+				<div className="header-shadow"></div>
 			</header>
 			<main className='main'>
 				<div className='first-box'>

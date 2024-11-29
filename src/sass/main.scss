@@ -15,7 +15,7 @@ body {
 }
 
 .shadow {
-	display: none;
+	// display: none;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -242,7 +242,8 @@ body {
 }
 
 .last-box-inner-text,
-.modal-box-inner-text {
+.modal-box-inner-text,
+.complete-text {
 	margin-bottom: 2em;
 	color: var(--dark-gray);
 	font-size: 1.36rem;
@@ -272,7 +273,8 @@ body {
 }
 
 .last-box-inner-left-btn,
-.modal-box-inner-left-btn {
+.modal-box-inner-left-btn,
+.complete-btn {
 	padding: 1em 2em;
 	background-color: var(--moderate-cyan);
 	color: white;
@@ -281,10 +283,11 @@ body {
 	border-radius: 2em;
 }
 
-.modal {
+.modal,
+.complete {
 	display: none;
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 86.7%;
@@ -356,6 +359,19 @@ body {
 	&:last-child {
 		margin-bottom: 0;
 	}
+}
+
+.complete {
+	top: 25%;
+	padding: 2.5em 1.5em;
+	background-color: white;
+	border-radius: 0.5em;
+	text-align: center;
+	z-index: 100;
+}
+
+.complete-title {
+	margin: 1em 0;
 }
 
 // - Mobile: 375px

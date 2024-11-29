@@ -263,6 +263,20 @@ const App = () => {
 						</div>
 					</div>
 				</div>
+				<div className='complete'>
+					<img
+						src='src/images/icon-check.svg'
+						alt='Success icon'
+						className='complete-img'
+					/>
+					<h3 className='complete-title'>Thanks for your support!</h3>
+					<p className='complete-text'>
+						Your pledge brings us one step closer to sharing Mastercraft
+						Bamboo Monitor Riser worldwide. You will get an email once our
+						campaign is completed.
+					</p>
+					<button className='complete-btn'>Got it!</button>
+				</div>
 			</main>
 		</>
 	)
@@ -351,8 +365,7 @@ export default App
 //   <!-- Success modal start -->
 
 //   Thanks for your support!
-//   Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-//   an email once our campaign is completed.
-//   Got it!
+//   .
+//
 
 //   <!-- Success modal end -->

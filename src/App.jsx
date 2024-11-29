@@ -149,7 +149,7 @@ const App = () => {
 						</button>
 					</div>
 				</div>
-				<div className='last-box modal'>
+				<div className='modal'>
 					<div className='modal-up-box'>
 						<h2 className='modal-box-title'>Back this project</h2>
 						<img

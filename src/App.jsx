@@ -55,7 +55,7 @@ const App = () => {
 						className='header-img'
 					/>
 				</picture>
-				<div className="header-shadow"></div>
+				<div className='header-shadow'></div>
 			</header>
 			<main className='main'>
 				<div className='first-box'>
@@ -80,6 +80,7 @@ const App = () => {
 									alt='Bookmark icon'
 									className='main-save-img'
 								/>
+								<span className='bookmark-span'>Bookmark</span>
 							</button>
 						</div>
 					</div>

@@ -1,0 +1,53 @@
+@use '../../../sass/utilities/index' as *;
+
+.last-box {
+	@include main-boxes-style;
+}
+
+.last-box-title {
+	@include box-title;
+}
+
+.last-box-text {
+	@include box-text;
+}
+
+.last-box-inner {
+	@include box-inner;
+}
+
+.last-box-up-wrapper {
+	@include box-wrapper;
+}
+
+.last-box-inner-title {
+	@include title-label;
+}
+
+.last-box-inner-pledge {
+	@include pledge-span;
+}
+
+.last-box-inner-text {
+	@include text;
+}
+
+.last-box-inner-left {
+	@include inner-left;
+}
+
+.last-box-inner-left-price {
+    @include left-price;
+}
+
+@media (min-width: 992px) {
+	.last-box {
+		@include width;
+	}
+	.last-box-down-wrapper {
+		@include box-wrapper;
+	}
+	.last-box-inner-left {
+		margin-bottom: 0;
+	}
+}

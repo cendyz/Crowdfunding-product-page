@@ -12,6 +12,7 @@ body {
 	font-size: 16px;
 	font-family: 'Commissioner', sans-serif;
 	background-color: rgb(250, 250, 250);
+
 }
 
 .wrapper {
@@ -437,9 +438,9 @@ body {
 	.second-box,
 	.main,
 	.last-box,
-	.modal {
-		max-width: 711px;
-		width: 39.79vw;
+	.modal,
+	.first-box-content {
+		width: 711px;
 		margin: 0 auto;
 	}
 	.main {
@@ -464,6 +465,12 @@ body {
 
 	.first-btn {
 		width: 35%;
+		transition: background-color 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+		&:hover,
+		&:focus {
+			background-color: var(--dark-cyan);
+		}
 	}
 
 	.first-save {
@@ -533,15 +540,8 @@ body {
 		margin-bottom: 0;
 	}
 
-	.modal-box-inner {
-		// display: none;
-	}
-
-	.modal-box-inner-desktop {
-	}
-
 	.modal {
-		display: block;
+		// display: block;
 	}
 
 	.modal-select-label {
@@ -550,7 +550,7 @@ body {
 	}
 
 	.modal-input-desktop {
-		width: 2.9em;
+		width: 2.7em;
 		&:checked {
 			background-color: var(--moderate-cyan);
 			box-shadow: inset -0.005rem -0.005rem 0 0.45rem white;
@@ -626,10 +626,9 @@ body {
 			content: '$';
 			position: absolute;
 			top: 49%;
-			left: 11.19vw;
+			left: 12.2em;
 			transform: translateY(-50%);
 			color: var(--dark-gray);
-			
 		}
 	}
 
@@ -650,6 +649,14 @@ body {
 		border-radius: 1.5em;
 		border: 1px solid rgb(204, 204, 204);
 		width: 25%;
+	}
+
+	.first-save, .last-box-inner-left-btn {
+		transition: color .2s, background-color .2s;
+	}
+
+	.last-box-inner-left-btn:hover {
+		background-color: var(--dark-cyan);
 	}
 }
 

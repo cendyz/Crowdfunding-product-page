@@ -195,6 +195,103 @@ const App = () => {
 						Want to support us in bringing Mastercraft Bamboo Monitor Riser
 						out in the world?
 					</p>
+					<div className='modal-box-inner-desktop'>
+						<div className='modal-up-wrapper'>
+							<input
+								type='radio'
+								name='pledge'
+								id='zero'
+								className='modal-input-desktop'
+							/>
+							<div className='modal-select-desktop'>
+								<div className='modal-text-up'>
+									<label
+										htmlFor='zero'
+										className='modal-select-label-desktop'>
+										Pledge with no reward
+										<span className='modal-select-label-span-desktop'>
+											Pledge $25 or more
+										</span>
+									</label>
+									<div className='modal-box-inner-left-desktop'>
+										<p className='modal-box-inner-left-price-desktop'>
+											64
+										</p>
+										<p className='modal-box-inner-left-text-desktop'>
+											left
+										</p>
+									</div>
+								</div>
+								<p className='modal-box-inner-text-desktop'>
+									Choose to support us without a reward if you simply
+									believe in our project. As a backer, you will be signed
+									up to receive product updates via email.
+								</p>
+							</div>
+						</div>
+						<div className='modal-bottom-wrapper'>
+							<label htmlFor='price' className='modal-bottom-label'>
+								Enter your pledge
+							</label>
+							<div className='modal-bottom-right'>
+								<input
+									type='text'
+									id='price'
+									className='modal-bottom-input'
+									placeholder='25'
+								/>
+								<button className='modal-bottom-continue'>Continue</button>
+							</div>
+						</div>
+					</div>
+					<div className='modal-box-inner-desktop'>
+						<div className='modal-up-wrapper'>
+							<input
+								type='radio'
+								name='pledge'
+								id='zero'
+								className='modal-input-desktop'
+							/>
+							<div className='modal-select-desktop'>
+								<div className='modal-text-up'>
+									<label
+										htmlFor='zero'
+										className='modal-select-label-desktop'>
+										Pledge with no reward
+										<span className='modal-select-label-span-desktop'>
+											Pledge $25 or more
+										</span>
+									</label>
+									<div className='modal-box-inner-left-desktop'>
+										<p className='modal-box-inner-left-price-desktop'>
+											64
+										</p>
+										<p className='modal-box-inner-left-text-desktop'>
+											left
+										</p>
+									</div>
+								</div>
+								<p className='modal-box-inner-text-desktop'>
+									Choose to support us without a reward if you simply
+									believe in our project. As a backer, you will be signed
+									up to receive product updates via email.
+								</p>
+							</div>
+						</div>
+						<div className='modal-bottom-wrapper'>
+							<label htmlFor='price' className='modal-bottom-label'>
+								Enter your pledge
+							</label>
+							<div className='modal-bottom-right'>
+								<input
+									type='text'
+									id='price'
+									className='modal-bottom-input'
+								/>
+								<button className='modal-bottom-continue'>Continue</button>
+							</div>
+						</div>
+					</div>
 					<div className='modal-box-inner'>
 						<div className='modal-select'>
 							<input

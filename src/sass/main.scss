@@ -240,14 +240,16 @@ body {
 }
 
 .last-box-inner-title,
-.modal-select-label {
+.modal-select-label,
+.modal-select-label-desktop {
 	margin-bottom: 0.8em;
 	font-size: 1.4rem;
 	font-weight: bolder;
 }
 
 .last-box-inner-pledge,
-.modal-select-label-span {
+.modal-select-label-span,
+.modal-select-label-span-desktop {
 	margin-bottom: 1.7em;
 	color: var(--moderate-cyan);
 	font-size: 1.4rem;
@@ -256,7 +258,8 @@ body {
 
 .last-box-inner-text,
 .modal-box-inner-text,
-.complete-text {
+.complete-text,
+.modal-box-inner-text-desktop {
 	margin-bottom: 2em;
 	color: var(--dark-gray);
 	font-size: 1.36rem;
@@ -265,7 +268,8 @@ body {
 }
 
 .last-box-inner-left,
-.modal-box-inner-left {
+.modal-box-inner-left,
+.modal-box-inner-left-desktop {
 	margin-bottom: 1.7em;
 	display: flex;
 	align-items: center;
@@ -273,13 +277,15 @@ body {
 }
 
 .last-box-inner-left-price,
-.modal-box-inner-left-price {
+.modal-box-inner-left-price,
+.modal-box-inner-left-price-desktop {
 	font-size: 3rem;
 	font-weight: 700;
 }
 
 .last-box-inner-left-text,
-.modal-box-inner-left-text {
+.modal-box-inner-left-text,
+.modal-box-inner-left-text-desktop {
 	color: var(--dark-gray);
 	font-size: 1.4rem;
 	font-weight: 500;
@@ -287,7 +293,8 @@ body {
 
 .last-box-inner-left-btn,
 .modal-box-inner-left-btn,
-.complete-btn {
+.complete-btn,
+.modal-bottom-continue {
 	padding: 1em 2em;
 	background-color: var(--moderate-cyan);
 	color: white;
@@ -341,7 +348,8 @@ body {
 	column-gap: 1em;
 }
 
-.modal-input {
+.modal-input,
+.modal-input-desktop {
 	display: inline-block;
 	appearance: none;
 	width: 1.7em;
@@ -428,7 +436,8 @@ body {
 
 	.second-box,
 	.main,
-	.last-box {
+	.last-box,
+	.modal {
 		max-width: 711px;
 		width: 39.79vw;
 		margin: 0 auto;
@@ -485,7 +494,6 @@ body {
 	.second-box-content {
 		padding-right: 3em;
 		border-right: 1px solid rgb(211, 211, 211);
-		// width: 30%;
 		text-align: left;
 
 		&:nth-child(2) {
@@ -506,16 +514,16 @@ body {
 	.second-box-content-line {
 		display: none;
 	}
-	
+
 	.second-box-line {
 		margin-top: 1em;
 		&::before {
 			width: 85%;
-
 		}
 	}
 
-	.last-box-up-wrapper, .last-box-down-wrapper {
+	.last-box-up-wrapper,
+	.last-box-down-wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -525,11 +533,124 @@ body {
 		margin-bottom: 0;
 	}
 
+	.modal-box-inner {
+		// display: none;
+	}
 
+	.modal-box-inner-desktop {
+	}
 
-	// .second-box-content {
-	// 	border-bottom: none;
-	// }
+	.modal {
+		display: block;
+	}
+
+	.modal-select-label {
+		flex-direction: row;
+		column-gap: 1em;
+	}
+
+	.modal-input-desktop {
+		width: 2.9em;
+		&:checked {
+			background-color: var(--moderate-cyan);
+			box-shadow: inset -0.005rem -0.005rem 0 0.45rem white;
+		}
+	}
+
+	.modal-box-inner-desktop {
+		margin-bottom: 1.5em;
+		border-radius: 1em;
+		border: 2px solid rgb(218, 218, 218);
+	}
+
+	.modal-box-inner-left-price-desktop {
+		font-size: 1.8rem;
+		height: fit-content;
+	}
+
+	.modal-up-wrapper {
+		display: flex;
+		column-gap: 1em;
+		align-items: flex-start;
+	}
+
+	.modal-select-label-span-desktop,
+	.modal-box-inner-left-desktop,
+	.modal-select-label-desktop {
+		margin-bottom: 0;
+	}
+
+	.modal-text-up,
+	.modal-select-label-desktop {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.modal-select-label-desktop {
+		column-gap: 1em;
+	}
+
+	.modal-text-up {
+		align-items: center;
+		margin-bottom: 1em;
+	}
+
+	.modal-box-inner-text-desktop {
+		margin-bottom: 0;
+	}
+
+	.modal-up-wrapper {
+		padding: 1.5em;
+		border-bottom: 1px solid rgb(214, 214, 214);
+	}
+
+	.modal-bottom-wrapper {
+		padding: 1.5em;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.modal-bottom-label {
+		color: var(--dark-gray);
+		font-size: 1.5rem;
+	}
+
+	.modal-bottom-right {
+		position: relative;
+		display: flex;
+		column-gap: 1em;
+		justify-content: flex-end;
+
+		&::before {
+			content: '$';
+			position: absolute;
+			top: 49%;
+			left: 11.19vw;
+			transform: translateY(-50%);
+			color: var(--dark-gray);
+			
+		}
+	}
+
+	.modal-bottom-continue,
+	.modal-bottom-input {
+		padding: 0.8em 1.5em;
+	}
+
+	.modal-bottom-input,
+	.modal-bottom-input::placeholder {
+		font-weight: 500;
+		color: black;
+		font-size: 1.6rem;
+	}
+
+	.modal-bottom-input {
+		padding-left: 2em;
+		border-radius: 1.5em;
+		border: 1px solid rgb(204, 204, 204);
+		width: 25%;
+	}
 }
 
 // - Mobile: 375px

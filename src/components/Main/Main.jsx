@@ -1,11 +1,11 @@
-import { FirstBox, SecondBox } from './index'
+import { FirstBox, SecondBox, LastBox } from './index'
 
 const Main = () => {
 	return (
 		<main className='main'>
 			<FirstBox />
 			<SecondBox />
-			
+			<LastBox />
 			<div className='modal'>
 				<div className='modal-up-box'>
 					<h2 className='modal-box-title'>Back this project</h2>

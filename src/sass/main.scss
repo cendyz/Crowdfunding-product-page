@@ -68,13 +68,11 @@ body {
 	@include left-price;
 }
 
-.last-box-inner-left-text,
 .modal-box-inner-left-text,
 .modal-box-inner-left-text-desktop {
 	@include left-text;
 }
 
-.last-box-inner-left-btn,
 .modal-box-inner-left-btn,
 .complete-btn,
 .modal-bottom-continue {
@@ -184,7 +182,6 @@ body {
 		@include width;
 	}
 
-	.last-box-inner-left-btn,
 	.complete-btn {
 		@include btn-transition;
 	}
@@ -351,13 +348,7 @@ body {
 		width: 25%;
 	}
 
-	.last-box-inner-left-btn {
-		transition: color 0.2s, background-color 0.2s;
-	}
 
-	.last-box-inner-left-btn:hover {
-		background-color: var(--dark-cyan);
-	}
 
 	.complete {
 		top: 47%;

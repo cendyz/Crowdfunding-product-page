@@ -7,8 +7,9 @@ const SecondBox = () => {
 		<div className='second-box'>
 			<div className='second-box-wrapper'>
 				{secondData.map(({ price, text }) => {
+					const id = uuidv4()
 					return (
-						<div className='second-box-content'>
+						<div className='second-box-content' key={id}>
 							<p className='second-box-content-price'>{price}</p>
 							<p className='second-box-content-text'>{text}</p>
 							<div className='second-box-content-line'></div>

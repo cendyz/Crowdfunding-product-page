@@ -37,7 +37,15 @@
 }
 
 .last-box-inner-left-price {
-    @include left-price;
+	@include left-price;
+}
+
+.last-box-inner-left-text {
+	@include left-text;
+}
+
+.last-box-inner-left-btn {
+	@include click-btn;
 }
 
 @media (min-width: 992px) {
@@ -49,5 +57,9 @@
 	}
 	.last-box-inner-left {
 		margin-bottom: 0;
+	}
+	.last-box-inner-left-btn {
+		@include btn-transition;
+		transition: color 0.2s, background-color 0.2s;
 	}
 }

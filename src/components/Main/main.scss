@@ -1,8 +1,15 @@
 @use '../../sass/utilities/index' as *;
 
 .main {
-    display: grid;
+	display: grid;
 	row-gap: 1.5em;
 	margin-top: 8em;
-    @include width;
+	margin: 0 auto;
+	width: 87%;
+}
+
+@media (min-width: 992px) {
+	.main {
+		@include width;
+	}
 }

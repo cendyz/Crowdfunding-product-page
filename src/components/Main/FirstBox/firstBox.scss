@@ -1,6 +1,7 @@
 @use '../../../sass/utilities/index' as *;
 
 .first-box {
+	margin-top: 8em;
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
 	z-index: 10;

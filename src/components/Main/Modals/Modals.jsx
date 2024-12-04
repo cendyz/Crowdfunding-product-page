@@ -1,9 +1,9 @@
-import ModalDesktopSelect from './ModalDesktopSelect'
+import ModalSelect from './ModalSelect'
 
 const Modals = () => {
 	return (
 		<>
-			<ModalDesktopSelect />
+			<ModalSelect />
 		</>
 	)
 }

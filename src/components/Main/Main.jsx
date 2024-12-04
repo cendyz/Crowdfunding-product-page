@@ -1,4 +1,5 @@
-import { FirstBox, SecondBox, LastBox, Modals, Complete } from './index'
+import { FirstBox, SecondBox, LastBox, Modals } from './index'
+import './main.scss'
 
 const Main = () => {
 	return (
@@ -7,7 +8,6 @@ const Main = () => {
 			<SecondBox />
 			<LastBox />
 			<Modals />
-			<Complete />
 		</main>
 	)
 }

@@ -18,6 +18,8 @@
 
 .last-box-up-wrapper {
 	@include box-wrapper;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .last-box-inner-title {

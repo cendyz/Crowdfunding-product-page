@@ -1,0 +1,98 @@
+@use '../../../sass/utilities/index' as *;
+
+.modal-select {
+    position: absolute;
+    top:20%;
+    width: 87%;
+    padding: 1.5em;
+    background-color: white;
+    border-radius: .5em;
+    z-index: 10;
+}
+
+.modal-select-box-inner {
+    margin-bottom: 1.5em;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: .5em;
+}
+
+.modal-select-up-box {
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-select-box-title {
+    font-size: 1.9rem;
+}
+
+.modal-select-box-text {
+    margin-bottom: 1.2em;
+    color: $dark-gray;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.modal-up-wrapper {
+    padding: 1em;
+}
+
+
+.modal-text-up {
+    font-weight: 600;
+}
+
+.modal-select-label {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+    font-size: 1.5rem;
+}
+
+.modal-select-label-span {
+    color: $moderate-cyan;
+}
+
+.modal-box-inner-text-desktop {
+    margin-top: 1em;
+    color: $dark-gray;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.modal-box-inner-left-desktop {
+    margin: 1.3em 0 .7em;
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+}
+
+.modal-box-inner-left-price-desktop {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.modal-box-inner-left-text-desktop {
+    font-size: 1.4rem;
+    color: $dark-gray;
+}
+
+.modal-bottom-wrapper {
+    padding: 1.5em 1em 1em;
+    border-top: 1px solid rgb(223, 223, 223);
+}
+
+.modal-bottom-label {
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+    color: $dark-gray;
+    font-size: 1.5rem;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}

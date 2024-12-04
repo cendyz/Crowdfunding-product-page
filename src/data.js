@@ -47,7 +47,7 @@ export const lastData = [
 	},
 ]
 
-export const modalDesktopSelectData = [
+export const modalSelectData = [
 	{
 		inputId: 'zero',
 		title: 'Pledge with no reward',

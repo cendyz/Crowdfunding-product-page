@@ -5,9 +5,12 @@ import { useState } from 'react'
 
 const ModalSelect = () => {
 	const [check, setCheck] = useState(null)
+	const [activeInput, setActiveInput] = useState(null)
+	const handleFocus = id => setActiveInput(id)
+	const handleBlur = () => setActiveInput(null)
 
-	const handleRadio = (id) => {
-		setCheck(checking => checking === id ? null : id)
+	const handleRadio = id => {
+		setCheck(checking => (checking === id ? null : id))
 	}
 
 	return (
@@ -54,26 +57,41 @@ const ModalSelect = () => {
 									</label>
 								</div>
 							</div>
-							<div className='modal-label'>
-								<p className='modal-box-inner-text-desktop'>{text}</p>
-								<div className='modal-box-inner-left-desktop'>
-									<p className='modal-box-inner-left-price-desktop'>
-										{amount || '0'}
-									</p>
-									<p className='modal-box-inner-left-text-desktop'>left</p>
-								</div>
+
+							<p className='modal-box-inner-text-desktop'>{text}</p>
+
+							<div className='modal-box-inner-left-desktop'>
+								<p className='modal-box-inner-left-price-desktop'>
+									{amount || '0'}
+								</p>
+								<p className='modal-box-inner-left-text-desktop'>left</p>
 							</div>
 						</div>
-						<div className='modal-bottom-wrapper'>
+						<div
+							className={
+								check === inputId
+									? 'modal-bottom-wrapper'
+									: 'none'
+							}>
 							<label className='modal-bottom-label'>
 								Enter your pledge
 							</label>
 							<div className='modal-bottom-right'>
-								<input
-									type='text'
-									className='modal-bottom-input'
-									placeholder={amount || ''}
-								/>
+								<div
+									className={
+										activeInput === inputId
+											? 'input-box2 input-box2-border'
+											: 'input-box2'
+									}>
+									<input
+										type='text'
+										className='modal-bottom-input'
+										placeholder={amount || ''}
+										onFocus={() => handleFocus(inputId)}
+										onBlur={handleBlur}
+									/>
+									<span className='input-dollar'>$</span>
+								</div>
 								<button className='modal-bottom-continue'>Continue</button>
 							</div>
 						</div>

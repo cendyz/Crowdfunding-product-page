@@ -36,12 +36,12 @@
 
 .btns {
 	display: flex;
-	justify-content: center;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .first-btn {
 	width: 75%;
+	max-width: 13.75em;
 	background-color: var(--moderate-cyan);
 	border-radius: 4em;
 	color: white;

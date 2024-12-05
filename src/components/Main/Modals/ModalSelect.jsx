@@ -69,9 +69,7 @@ const ModalSelect = () => {
 						</div>
 						<div
 							className={
-								check === inputId
-									? 'modal-bottom-wrapper'
-									: 'none'
+								check === inputId ? 'modal-bottom-wrapper' : 'none'
 							}>
 							<label className='modal-bottom-label'>
 								Enter your pledge
@@ -83,6 +81,7 @@ const ModalSelect = () => {
 											? 'input-box2 input-box2-border'
 											: 'input-box2'
 									}>
+									<span className='input-dollar'>$</span>
 									<input
 										type='text'
 										className='modal-bottom-input'
@@ -90,7 +89,6 @@ const ModalSelect = () => {
 										onFocus={() => handleFocus(inputId)}
 										onBlur={handleBlur}
 									/>
-									<span className='input-dollar'>$</span>
 								</div>
 								<button className='modal-bottom-continue'>Continue</button>
 							</div>

@@ -1,8 +1,15 @@
 import closeImg from '../../../images/icon-close-modal.svg'
 import './modalSelect.scss'
 import { modalSelectData } from '../../../data'
+import { useState } from 'react'
 
 const ModalSelect = () => {
+	const [check, setCheck] = useState(null)
+
+	const handleRadio = (id) => {
+		setCheck(checking => checking === id ? null : id)
+	}
+
 	return (
 		<div className='modal-select'>
 			<div className='modal-select-up-box'>
@@ -19,7 +26,13 @@ const ModalSelect = () => {
 			</p>
 			{modalSelectData.map(({ inputId, title, pledge, amount, text }) => {
 				return (
-					<div className='modal-select-box-inner' key={inputId}>
+					<div
+						className={
+							check === inputId
+								? 'modal-select-box-inner green-box'
+								: 'modal-select-box-inner'
+						}
+						key={inputId}>
 						<div className='modal-up-wrapper'>
 							<div className='box'>
 								<div className='input-box'>
@@ -27,7 +40,9 @@ const ModalSelect = () => {
 										type='radio'
 										name='pledge'
 										id={inputId}
-										className='modal-desktop'
+										checked={check === inputId}
+										onChange={() => handleRadio(inputId)}
+										className='modal-select-top-input'
 									/>
 								</div>
 								<div className='modal-text-up'>

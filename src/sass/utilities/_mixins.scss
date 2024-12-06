@@ -23,7 +23,7 @@
 	padding: 1.5em;
 	border: 1px solid rgb(222, 222, 222);
 	border-radius: 0.5em;
-	&:last-child {
+	&:nth-child(6) {
 		margin-bottom: 0;
 		position: relative;
 		z-index: 0;

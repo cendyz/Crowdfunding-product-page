@@ -3,7 +3,7 @@ import './modalSelect.scss'
 import { modalSelectData } from '../../../data'
 import { useState } from 'react'
 
-const ModalSelect = () => {
+const ModalSelect = ({ isEnabled, setIsEnabled }) => {
 	const firstTimeData = {
 		zero: 0,
 		one: 25,
@@ -15,7 +15,7 @@ const ModalSelect = () => {
 	const [checkFocus, setCheckFocus] = useState(null)
 	const [checkValue, setCheckValue] = useState(null)
 	const [pledgePrice, setPledgePrice] = useState(firstTimeData)
-
+	
 	const handleCheck = id => {
 		setCheck(prevId => (prevId === id ? null : id))
 		setPledgePrice(firstTimeData)
@@ -46,14 +46,17 @@ const ModalSelect = () => {
 		}
 	}
 
+
+
 	return (
-		<div className='modal-select'>
+		<div className={isEnabled ? 'modal-select' : 'none'}>
 			<div className='modal-select-up-box'>
 				<h2 className='modal-select-box-title'>Back this project</h2>
 				<img
 					src={closeImg}
 					alt='X icon'
 					className='modal-select-up-box-x'
+					onClick={() => setIsEnabled(!isEnabled)} 
 				/>
 			</div>
 			<p className='modal-select-box-text'>
@@ -83,7 +86,7 @@ const ModalSelect = () => {
 								</div>
 								<div className='modal-text-up'>
 									<label htmlFor={inputId} className='modal-select-label'>
-										{title}
+										<span className='pledge-span'>{title}</span>
 										<span className='modal-select-label-span'>
 											Pledge ${pledge || ''} or more
 										</span>

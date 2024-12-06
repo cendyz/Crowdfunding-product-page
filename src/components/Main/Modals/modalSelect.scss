@@ -1,14 +1,16 @@
 @use '../../../sass/utilities/index' as *;
 
 .modal-select {
-	// display: none;
 	position: absolute;
 	top: 20%;
-	width: 87%;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0 auto;
 	padding: 1.5em;
+	width: 87%;
 	background-color: white;
 	border-radius: 0.5em;
-	z-index: 10;
+	z-index: 11;
 }
 
 .modal-select-box-inner {
@@ -219,7 +221,11 @@
 		max-width: 44.43em;
 	}
 
-	.modal-select-label {
+	.modal-select-label-span {
+		cursor: pointer;
+	}
+
+	.pledge-span {
 		cursor: pointer;
 		transition: color 0.2s;
 
@@ -276,5 +282,14 @@
 	.modal-bottom-input {
 		padding: 0.1em 0.5em;
 		width: 3.125em;
+	}
+
+	.modal-select-up-box-x {
+		cursor: pointer;
+		transition: filter 0.2s;
+		&:hover {
+			filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(308deg)
+				brightness(0%);
+		}
 	}
 }

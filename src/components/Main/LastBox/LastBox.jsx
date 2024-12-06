@@ -1,8 +1,13 @@
 import './lastBox.scss'
 import { v4 as uuidv4 } from 'uuid'
 import { lastData } from '../../../data'
+import { useState } from 'react'
+import ModalSelect from '../Modals/ModalSelect'
+import Shadow from '../../Shadow/Shadow'
 
 const LastBox = () => {
+	const [isEnabled, setIsEnabled] = useState(false)
+
 	return (
 		<div className='last-box'>
 			<h2 className='last-box-title'>About this project</h2>
@@ -34,13 +39,21 @@ const LastBox = () => {
 								<p className='last-box-inner-left-price'>{price}</p>
 								<p className='last-box-inner-left-text'>left</p>
 							</div>
-							<button className='last-box-inner-left-btn'>
+							<button
+								className='last-box-inner-left-btn'
+								onClick={() => setIsEnabled(!isEnabled)}>
 								{stock || 'Select Reward'}
 							</button>
 						</div>
 					</div>
 				)
 			})}
+			{isEnabled && (
+				<ModalSelect isEnabled={isEnabled} setIsEnabled={setIsEnabled} />
+			)}
+			{isEnabled && (
+				<Shadow isEnabled={isEnabled}/>
+			)}
 		</div>
 	)
 }

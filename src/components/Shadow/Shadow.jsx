@@ -1,6 +1,6 @@
 import './shadow.scss'
 
-const Shadow = () => {
-	return <div className='shadow'></div>
+const Shadow = ({isEnabled}) => {
+	return <div className={isEnabled && 'shadow'}></div>
 }
 export default Shadow

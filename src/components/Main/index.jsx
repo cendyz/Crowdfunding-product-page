@@ -1,6 +1,6 @@
 import FirstBox from './FirstBox/FirstBox'
 import SecondBox from './SecondBox/SecondBox'
 import LastBox from './LastBox/LastBox'
-import Modals from './Modals/Modals'
+import ModalSelect from './Modals/ModalSelect'
 
-export { FirstBox, SecondBox, LastBox, Modals }
+export { FirstBox, SecondBox, LastBox, ModalSelect }

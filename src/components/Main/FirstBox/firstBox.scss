@@ -97,5 +97,12 @@
 	.bookmark-span {
 		display: inline;
 		color: #b0b0b0;
+		font-weight: bold;
+		
 	}
+}
+
+.clicked {
+	color: $moderate-cyan;
+	cursor: pointer;
 }

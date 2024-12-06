@@ -1,13 +1,16 @@
-import { FirstBox, SecondBox, LastBox, Modals } from './index'
+import { useState } from 'react'
+import { FirstBox, SecondBox, LastBox, ModalSelect } from './index'
 import './main.scss'
 
 const Main = () => {
+	const [activeBookmark, setActiveBookmark] = useState(false)
+
 	return (
 		<main className='main'>
-			<FirstBox />
+			<FirstBox activeBookmark={activeBookmark} />
 			<SecondBox />
 			<LastBox />
-			<Modals />
+			<ModalSelect setActiveBookmark={setActiveBookmark} />
 		</main>
 	)
 }

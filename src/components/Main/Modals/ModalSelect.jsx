@@ -3,7 +3,7 @@ import './modalSelect.scss'
 import { modalSelectData } from '../../../data'
 import { useState } from 'react'
 
-const ModalSelect = ({ isEnabled, setIsEnabled }) => {
+const ModalSelect = ({ isEnabled, setIsEnabled, setActiveBookmark }) => {
 	const firstTimeData = {
 		zero: 0,
 		one: 25,
@@ -15,7 +15,7 @@ const ModalSelect = ({ isEnabled, setIsEnabled }) => {
 	const [checkFocus, setCheckFocus] = useState(null)
 	const [checkValue, setCheckValue] = useState(null)
 	const [pledgePrice, setPledgePrice] = useState(firstTimeData)
-	
+
 	const handleCheck = id => {
 		setCheck(prevId => (prevId === id ? null : id))
 		setPledgePrice(firstTimeData)
@@ -42,11 +42,12 @@ const ModalSelect = ({ isEnabled, setIsEnabled }) => {
 		if (pledgePrice[inputId] < minimumPledge) {
 			setCheckValue(inputId)
 		} else {
+			setIsEnabled(false)
 			setCheckValue(null)
 		}
+
+		setActiveBookmark(prevState => !prevState)
 	}
-
-
 
 	return (
 		<div className={isEnabled ? 'modal-select' : 'none'}>
@@ -56,7 +57,7 @@ const ModalSelect = ({ isEnabled, setIsEnabled }) => {
 					src={closeImg}
 					alt='X icon'
 					className='modal-select-up-box-x'
-					onClick={() => setIsEnabled(!isEnabled)} 
+					onClick={() => setIsEnabled(!isEnabled)}
 				/>
 			</div>
 			<p className='modal-select-box-text'>

@@ -1,9 +1,14 @@
 import './firstBox.scss'
-
 import logo from '../../../images/logo-mastercraft.svg'
 import bookmark from '../../../images/icon-bookmark-default.svg'
+import clicked from '../../../images/icon-bookmark-clicked.svg'
 
-const FirstBox = () => {
+const FirstBox = ({activeBookmark}) => {
+
+	const check = () => {
+		console.log(activeBookmark);
+		
+	}
 	return (
 		<div className='first-box'>
 			<img src={logo} alt='M letter' className='first-logo' />
@@ -14,14 +19,19 @@ const FirstBox = () => {
 					strain.
 				</p>
 				<div className='btns'>
-					<button className='first-btn'>Back this project</button>
-					<button className='first-save'>
+					<button className='first-btn' onClick={check}>Back this project</button>
+					<button className={activeBookmark ? 'first-save clicked' : 'first-save'}>
 						<img
-							src={bookmark}
+							src={activeBookmark ? clicked : bookmark}
 							alt='Bookmark icon'
 							className='main-save-img'
 						/>
-						<span className='bookmark-span'>Bookmark</span>
+						<span
+							className={
+								activeBookmark ? 'bookmark-span clicked' : 'bookmark-span'
+							}>
+							Bookmark
+						</span>
 					</button>
 				</div>
 			</div>

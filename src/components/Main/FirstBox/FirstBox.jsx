@@ -6,7 +6,7 @@ import clicked from '../../../images/icon-bookmark-clicked.svg'
 const FirstBox = ({activeBookmark}) => {
 
 	const check = () => {
-		console.log(activeBookmark);
+		
 		
 	}
 	return (

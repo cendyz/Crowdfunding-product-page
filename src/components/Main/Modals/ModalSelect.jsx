@@ -4,17 +4,22 @@ import { modalSelectData } from '../../../data'
 import { useState } from 'react'
 
 const ModalSelect = () => {
-	const [check, setCheck] = useState(null)
-	const [checkFocus, setCheckFocus] = useState(null)
-	const [pledgePrice, setPledgePrice] = useState({
+	const firstTimeData = {
 		zero: 0,
 		one: 25,
 		two: 75,
 		three: 200,
-	})
+	}
+
+	const [check, setCheck] = useState(null)
+	const [checkFocus, setCheckFocus] = useState(null)
+	const [checkValue, setCheckValue] = useState(null)
+	const [pledgePrice, setPledgePrice] = useState(firstTimeData)
 
 	const handleCheck = id => {
 		setCheck(prevId => (prevId === id ? null : id))
+		setPledgePrice(firstTimeData)
+		setCheckValue(null)
 	}
 
 	const handleChange = e => {
@@ -31,8 +36,14 @@ const ModalSelect = () => {
 		setCheckFocus(null)
 	}
 
-	const handleButton = e => {
-		console.log(modalSelectData[1].pledge)
+	const handleButton = inputId => {
+		const minimumPledge =
+			modalSelectData.find(item => item.inputId === inputId)?.pledge || 0
+		if (pledgePrice[inputId] < minimumPledge) {
+			setCheckValue(inputId)
+		} else {
+			setCheckValue(null)
+		}
 	}
 
 	return (
@@ -101,10 +112,7 @@ const ModalSelect = () => {
 									className={
 										checkFocus === inputId
 											? 'input-box2 input-box2-border'
-											: pledgePrice[inputId] <
-											  (modalSelectData.find(
-													item => item.inputId === inputId
-											  )?.pledge || 0)
+											: checkValue === inputId
 											? 'input-box2 warning'
 											: 'input-box2'
 									}>
@@ -121,7 +129,7 @@ const ModalSelect = () => {
 								</div>
 								<button
 									className='modal-bottom-continue'
-									onClick={handleButton}>
+									onClick={() => handleButton(inputId)}>
 									Continue
 								</button>
 							</div>

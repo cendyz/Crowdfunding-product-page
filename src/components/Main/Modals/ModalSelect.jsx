@@ -5,12 +5,34 @@ import { useState } from 'react'
 
 const ModalSelect = () => {
 	const [check, setCheck] = useState(null)
-	const [activeInput, setActiveInput] = useState(null)
-	const handleFocus = id => setActiveInput(id)
-	const handleBlur = () => setActiveInput(null)
+	const [checkFocus, setCheckFocus] = useState(null)
+	const [pledgePrice, setPledgePrice] = useState({
+		zero: 0,
+		one: 25,
+		two: 75,
+		three: 200,
+	})
 
-	const handleRadio = id => {
-		setCheck(checking => (checking === id ? null : id))
+	const handleCheck = id => {
+		setCheck(prevId => (prevId === id ? null : id))
+	}
+
+	const handleChange = e => {
+		const { name, value } = e.target
+
+		if (/^\d*$/.test(value)) {
+			setPledgePrice({ ...pledgePrice, [name]: value })
+		}
+	}
+	const handleFocus = id => {
+		setCheckFocus(id)
+	}
+	const handleBlur = () => {
+		setCheckFocus(null)
+	}
+
+	const handleButton = e => {
+		console.log(modalSelectData[1].pledge)
 	}
 
 	return (
@@ -44,7 +66,7 @@ const ModalSelect = () => {
 										name='pledge'
 										id={inputId}
 										checked={check === inputId}
-										onChange={() => handleRadio(inputId)}
+										onChange={() => handleCheck(inputId)}
 										className='modal-select-top-input'
 									/>
 								</div>
@@ -77,20 +99,31 @@ const ModalSelect = () => {
 							<div className='modal-bottom-right'>
 								<div
 									className={
-										activeInput === inputId
+										checkFocus === inputId
 											? 'input-box2 input-box2-border'
+											: pledgePrice[inputId] <
+											  (modalSelectData.find(
+													item => item.inputId === inputId
+											  )?.pledge || 0)
+											? 'input-box2 warning'
 											: 'input-box2'
 									}>
 									<span className='input-dollar'>$</span>
 									<input
 										type='text'
 										className='modal-bottom-input'
-										placeholder={amount || ''}
+										value={pledgePrice[inputId]}
+										name={inputId}
+										onChange={handleChange}
 										onFocus={() => handleFocus(inputId)}
 										onBlur={handleBlur}
 									/>
 								</div>
-								<button className='modal-bottom-continue'>Continue</button>
+								<button
+									className='modal-bottom-continue'
+									onClick={handleButton}>
+									Continue
+								</button>
 							</div>
 						</div>
 					</div>

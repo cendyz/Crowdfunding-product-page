@@ -305,7 +305,7 @@ const Complete = ({
 		setCheckComplete(false)
 	}
 	return (
-		<div className={checkComplete && 'complete'}>
+		<div className={checkComplete ? 'complete' : 'complete none'}>
 			<img src={checkIcon} alt='Check icon' className='complete-img' />
 			<h3 className='complete-title'>Thanks for your support</h3>
 			<p className='complete-text'>

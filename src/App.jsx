@@ -1,9 +1,8 @@
-import { Shadow, Nav, Header, Main } from './components'
+import { Nav, Header, Main } from './components'
 
 const App = () => {
 	return (
 		<>
-			<Shadow />
 			<Nav />
 			<Header />
 			<Main />
